@@ -1,9 +1,14 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import styles from '../../styles/interface/Header.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import ToggleSwitch from '../buttons/toggleSwitch';
+
 function Header() {
+    // доставать данные из localStorag
+    const [toggleSwitch, setToggleSwitch] = useState(false);
     return (
         <>
             <Head>
@@ -84,6 +89,7 @@ function Header() {
                         </li>
                         <li className={styles.MobileMenuItem}>
                             <Link href='/'><a className={styles.MobileMenuLink}>Темная тема</a></Link>
+                            <ToggleSwitch toggleSwitch={toggleSwitch} setToggleSwitch={setToggleSwitch}/>
                         </li>
                         <li className={styles.MobileMenuItem}>
                             <Link href='/'><a className={styles.MobileMenuLink}>Уведомления</a></Link>

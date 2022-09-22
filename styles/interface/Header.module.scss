@@ -176,11 +176,13 @@
 
 .MobileMenu {
     position: absolute;
+    z-index: 999999;
     height: 100vh;
     width: 237px;
     left: 0;
     background-color: #fff;
     padding: 0 20px 0 25px;
+    
 
     &CloseBtn {
         height: 50px;
@@ -215,12 +217,15 @@
                 color: #293462;
             }
             &::after {
-                content: "";
+                display: none;
             }
         }
         &:nth-child(5n) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             &::after {
-                content: "";
+                display: none;
             }
         }
         &::after {
