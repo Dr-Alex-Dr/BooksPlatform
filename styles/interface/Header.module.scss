@@ -1,0 +1,252 @@
+.Container {
+    max-width: 1280px;
+    width: 100%;
+    padding: 0 25px 0 25px;
+}
+.Wrapper {
+    display: flex;
+    height: 85px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.Inner {
+    display: flex;
+    height: 85px;
+    align-items: center;
+    width: 100%;
+}
+
+.Header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #FFF4D7;
+    display: flex;
+    justify-content: center;
+    
+    
+    // logo
+    &LogoCcontainer {
+        width: 148px;
+        height: 47px;
+        background: #FE5F55;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+
+    // form search
+    &SearchContainer {
+
+    }
+    &Form{
+        margin-left: 30px;
+        position: relative;
+        background-color: transparent;
+        &::before {
+            content: url('../../public/interface/header/search.svg');
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &Search {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 13px;
+        letter-spacing: 0.03em;
+        color: #293462;
+        opacity: 0.65;
+        width: 272px;
+        height: 32px;
+        border: 0.5px solid rgba(41, 52, 98, 0.5);
+        border-radius: 3px;
+        padding-left: 35px;
+        background-color: transparent;
+    }
+
+    // menu
+    &MenuContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    // select topic
+    &TopicBtn {
+        cursor: pointer;
+        margin: 0 30px 0 30px;
+    }
+
+    // menu items
+    &Menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &MenuItem {
+        margin-left: 20px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    &MenuLink {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 13px;
+        letter-spacing: 0.03em;  
+        color: #293462;
+    }
+
+    // account 
+    &AccountLink {
+        cursor: pointer;   
+    }
+
+    // auth
+    &AuthContainer {
+        display: flex;
+        align-items: center;
+    }
+    &SingIn {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 13px;
+        letter-spacing: 0.03em;
+        color: #293462;
+        cursor: pointer;
+    }
+    &LogIn {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 13px;
+        letter-spacing: 0.03em; 
+        color: #FFFFFF;
+
+        background: #FE5F55;
+        border-radius: 10px;
+        padding: 15px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+}
+
+// mobile header
+.HeaderM {
+    display: none;
+    position: fixed;
+    height: 55px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+
+    
+}
+.ContainerM {
+    min-width: 320px;
+    width: 100%;
+    padding: 0 20px 0 20px;
+}
+.WrapperM {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+}
+.OpenMenuBtn {
+    cursor: pointer;
+}
+.SearchBtn {
+    cursor: pointer;
+}
+
+.MobileMenu {
+    position: absolute;
+    height: 100vh;
+    width: 237px;
+    left: 0;
+    background-color: #fff;
+    padding: 0 20px 0 25px;
+
+    &CloseBtn {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &Link {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 45px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;
+        color: #293462;
+    }
+    &Item {
+        position: relative;
+        &:first-child {
+            a {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 45px;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.03em;
+                color: #293462;
+            }
+            &::after {
+                content: "";
+            }
+        }
+        &:nth-child(5n) {
+            &::after {
+                content: "";
+            }
+        }
+        &::after {
+            content: url('../../public/interface/header/rightArrow.svg');
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-65%);
+        }
+    }
+}
+@media (max-width: 1045px) {
+    .Header {
+        &Search {
+            width: 252px;        
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .Header {
+        display: none;
+    }
+    .HeaderM {
+        display: flex;
+    }
+}

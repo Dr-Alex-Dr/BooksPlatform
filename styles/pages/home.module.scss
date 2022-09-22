@@ -1,0 +1,19 @@
+.Home {
+    position: relative;
+    &::before {
+        content: "";
+       
+    }
+}
+
+@media (max-width: 1024px) {
+    .Home {
+        &::before {
+            content: "";
+        position: absolute;
+        width: 100%;
+        height: 568px;
+        background: linear-gradient(180.31deg, #FFF3D2 19.7%, #FCFCFC 43.24%);
+        }
+    }
+}
