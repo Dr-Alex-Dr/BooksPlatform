@@ -174,14 +174,34 @@
     cursor: pointer;
 }
 
+.MenuBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+    opacity: 0.6;
+    visibility: hidden;
+    transition: all ease-in-out 0.2s;
+    display: none;
+}
+.MenuBackActive {
+    visibility: visible;
+}
 .MobileMenu {
     position: absolute;
-    z-index: 999999;
+    z-index: 10000;
     height: 100vh;
     width: 237px;
     left: 0;
     background-color: #fff;
     padding: 0 20px 0 25px;
+
+    transform: translateX(-240px);
+    transition: all ease-in-out 0.2s;
+
+   
     
 
     &CloseBtn {
@@ -239,6 +259,10 @@
         }
     }
 }
+
+.MobileMenuActive {
+    transform: translateX(0);
+}
 @media (max-width: 1045px) {
     .Header {
         &Search {
@@ -248,6 +272,9 @@
 }
 
 @media (max-width: 1024px) {
+    .MenuBack {
+        display: block;
+    }
     .Header {
         display: none;
     }
