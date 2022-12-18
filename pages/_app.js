@@ -1,11 +1,14 @@
 import '../styles/globals.css'
+import Layout from 'components/Interface/Layout'
 
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className='container'>
-      <Component {...pageProps} />
-    </div>
+    <Layout>
+      <main>
+        <Component {...pageProps} />
+      </main>
+    </Layout>
   )
 }
 

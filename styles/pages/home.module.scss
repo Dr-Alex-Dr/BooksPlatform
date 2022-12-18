@@ -4,16 +4,288 @@
         content: "";
        
     }
+
+    &CategoriesSliderBtn {
+        position: absolute;
+        bottom: 1px;
+    }
+    &CategoriesContainer {
+        position: relative;
+        padding: 30px 80px 0 80px;
+    }
+    &CategoriesWrapper {
+        overflow: hidden; 
+    }
+    &CategoriesList {
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        justify-content: space-between;
+        &:hover {
+            transition: none;
+        }
+    }
+    &CategoriesListItem {
+        border: 0.5px solid rgba(0, 0, 0, 0.65);
+        border-radius: 8px;
+        padding: 12px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 19px;
+        line-height: 13px;
+        letter-spacing: 0.03em;
+        color: #293462;
+        margin-left: 35px;
+        &:first-child {
+            margin-left: 0;
+        }
+        cursor: pointer;
+        &:hover {
+            & {
+                background: #FE5F55;
+                color: #FFFFFF;
+                border-color: #FE5F55;
+            }
+        }
+    }
+    &CategoriesListItemActive {
+        background: #FE5F55;
+        color: #FFFFFF;
+    }
+    &BooksContainer {  
+        
+    }
+    &BooksPageContainer {
+        display: flex;
+        padding: 40px 80px 0 80px;
+    }
+    &BtnAddBooks {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 35px;
+        height: 35px;
+    }
+    &BtnAddImg {
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url('/home/addBtn.svg');
+            width: 35px;
+            height: 35px;
+            top: 10px;
+        }
+    }
+    &BtnFullAddImg {
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url('/home/addBtnFull.svg');
+            width: 35px;
+            height: 35px;
+            top: 10px;
+        }
+    }  
 }
+
+
+
+.HomeM {
+    &CategoriesContainer {
+        display: none;
+    }
+    &Title {
+        font-family: 'PT Serif';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 0.03em;
+        color: #293462;
+        padding-bottom: 20px;
+        margin-left: 25px;
+    }
+    &CategoriesName {
+        font-family: 'PT Serif';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.03em;
+        color: #293462;
+        margin-left: 25px;
+        display: flex;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url('/home/arrowLeft.svg');
+            width: 15px;
+            height: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 25px;
+        }
+    }
+    &CategoriesBooksContainer {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-bottom: 25px;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    &CategoriesBooksItem {
+        padding-top: 10px;
+        position: relative;
+        min-width: 120px;
+        max-width: 120px;
+        margin-left: 20px;
+        &:first-child {
+            margin-left: 25px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url('/../../public/home/typeBook/read.svg');
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &CategoriesBooksTitle {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 9px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;
+        color: #293462;
+        mix-blend-mode: normal;
+    }
+    &CategoriesBooksAuthor {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 9px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;
+        color: rgba(41, 52, 98, 0.5);
+        mix-blend-mode: normal;
+    }
+    &CategoriesBooksAuthor {
+        padding-top: 5px;
+    }
+}
+
+.AudioType {
+    &::after {
+        content: "";
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-image: url('/home/typeBook/ListenDesc.svg');
+        width: 28px;
+        height: 28px;
+    }
+}
+.TextType {
+    &::after {
+        content: "";
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-image: url('/home/typeBook/ReadDesc.svg');
+        width: 28px;
+        height: 28px;
+    }
+}
+.TextAudioType {
+    &::before {
+        content: "";
+        top: 0;
+        right: 34px;
+        position: absolute;
+        background-image: url('/home/typeBook/ListenDesc.svg');
+        width: 28px;
+        height: 28px;
+        z-index: 1;
+    }
+    &::after {
+        content: "";
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-image: url('/home/typeBook/ReadDesc.svg');
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.Container {
+    background-color: transparent;
+    position: relative;
+    top: 85px;
+    height: 100vh;
+}
+
+
+
 
 @media (max-width: 1024px) {
     .Home {
         &::before {
             content: "";
-        position: absolute;
-        width: 100%;
-        height: 568px;
-        background: linear-gradient(180.31deg, #FFF3D2 19.7%, #FCFCFC 43.24%);
+            position: absolute;
+            width: 100%;
+            height: 568px;
+            background: linear-gradient(180.31deg, #FFF3D2 19.7%, #FCFCFC 43.24%);
+        }
+        &CategoriesContainer {
+            display: none;
+        }
+        
+    }
+    .Container {
+        top: 55px;
+    }
+    .HomeM {
+        &CategoriesContainer {
+            display: block;
         }
     }
+    .AudioType {
+        &::after {
+            background-image: url('/home/typeBook/listen.svg');
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .TextType {
+        &::after {
+            background-image: url('/home/typeBook/read.svg');
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .TextAudioType {
+        &::before {
+            right: 23px;
+            top: 4px;
+            background-image: url('/home/typeBook/listen.svg');
+            width: 20px;
+            height: 20px;
+        }
+        &::after {
+            top: 4px;
+            background-image: url('/home/typeBook/read.svg');
+            width: 20px;
+            height: 20px;
+        }
+    }
+
 }

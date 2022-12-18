@@ -1,0 +1,47 @@
+.Btn {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+
+    background: rgba(166, 73, 66, 0.74);
+    border-radius: 8px;
+
+    padding: 10px 30px 10px 45px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url('/interface/subPlus.svg');
+        width: 17px;
+        height: 17px;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.BtnSub {
+    padding: 10px 30px 10px 30px;
+    &::before {
+        content: none;
+    }
+}
+
+.CountSubscribers {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: rgba(41, 52, 98, 0.6);
+
+    margin-top: 7px;
+}

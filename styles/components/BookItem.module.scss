@@ -1,0 +1,184 @@
+.Books {
+    position: relative;
+    &::before {
+        content: "";
+       
+    }
+
+    &ContainerItem {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    &ImgContainer {
+        position: relative;
+        padding-top: 10px;
+        min-width: 160px;
+        cursor: pointer;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    &Img {
+        border-radius: 8px;
+    }
+    &InfoContainer {
+        position: relative;
+        padding-top: 10px;
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        span {
+            margin-right: 7px;
+        }
+    }
+    &InfoWrapper {
+        p {
+            margin-top: 14px;
+            &:last-child {
+                margin-bottom: 3px;
+            }
+        }
+    }
+    &InfoTitle {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 13px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;     
+        color: #293462;       
+        mix-blend-mode: normal;
+        margin-bottom: 20px;
+        padding-top: 5px;
+        cursor: pointer;
+        &:hover {
+            color: #3FB2C7;
+        }
+    }
+    &InfoAuthor {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 13px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;      
+        color: #3FB2C7;       
+        mix-blend-mode: normal;
+        span {
+            color: #293462;
+            opacity: 0.75;
+        }
+    }
+    &InfoReader {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 13px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;      
+        color: #3FB2C7;       
+        mix-blend-mode: normal;
+        span {
+            color: #293462;
+            opacity: 0.75;
+        }
+    }
+    &InfoGenre {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 13px;  
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;     
+        color: #293462;      
+        mix-blend-mode: normal;
+        span {
+            opacity: 0.75;
+        }
+    }
+    &InfoRating {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 13px;  
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;     
+        color: #293462;      
+        mix-blend-mode: normal;
+        position: relative;
+        &::after {
+            content: "";
+            transform: translate(2px, 0px);
+            background-image: url('/home/star.svg');
+            width: 16px;
+            height: 16px;
+        }
+        span {
+            opacity: 0.75;
+        }
+    }
+    &InfoDesc {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;
+        color: #293462;
+        mix-blend-mode: normal;
+    }
+}
+
+.AudioType {
+    &::after {
+        content: "";
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-image: url('/home/typeBook/ListenDesc.svg');
+        width: 28px;
+        height: 28px;
+    }
+}
+.TextType {
+    &::after {
+        content: "";
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-image: url('/home/typeBook/ReadDesc.svg');
+        width: 28px;
+        height: 28px;
+    }
+}
+.TextAudioType {
+    &::before {
+        content: "";
+        top: 0;
+        right: 34px;
+        position: absolute;
+        background-image: url('/home/typeBook/ListenDesc.svg');
+        width: 28px;
+        height: 28px;
+        z-index: 1;
+    }
+    &::after {
+        content: "";
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-image: url('/home/typeBook/ReadDesc.svg');
+        width: 28px;
+        height: 28px;
+    }
+}

@@ -1,0 +1,147 @@
+.Author {
+    &Filter {
+        position: relative;
+    }
+    &FilterStartCategory {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 13px;
+        letter-spacing: 0.03em;
+
+        color: #293462;
+        padding: 15px 45px 15px 10px;
+        border-radius: 9px;
+        position: relative;
+        transition: all 0.2s ease;
+       
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url('/interface/filter.svg');
+            width: 20px;
+            height: 20px;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &FilterOtherCategories {
+        z-index: 64000;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        left: 0;
+        right: 0;
+    }
+    &FilterNameCategory {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 0.03em;
+        padding: 7px 0px 7px 0px;
+        color: #293462;
+    } 
+    &FilterNameCategoryActive {
+        font-weight: 600;
+    }
+    &FilterCategoryBtn {
+        opacity: 0;
+    }
+    &FilterCategoryBtn:nth-child(1) {
+        transition: all 0.19s ease;
+    }
+    &FilterCategoryBtn:nth-child(2) {
+        transition: all 0.13s ease;
+    }
+    &FilterCategoryBtn:nth-child(3) {
+        transition: all 0.06s ease;
+    }
+    &FilterCategoryBtnActive {
+        opacity: 1;
+    }
+    &FilterCategoryBtnActive:nth-child(1) {
+        transition-delay: 0.06s;
+    }
+    &FilterCategoryBtnActive:nth-child(2) {
+        transition-delay: 0.13s;
+    }
+    &FilterCategoryBtnActive:nth-child(3) {
+        transition-delay: 0.19s;
+    }
+
+    &FilterTitle {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 13px;
+        letter-spacing: 0.03em;
+        padding: 15px 10px 15px 10px;
+        color: #949494;
+        &::after {
+            content: none;
+        }
+    }
+    &FilterBtn {
+        min-width: 247px;
+        position: relative;
+        z-index: 16000;
+        &::before {
+            transition: all 0.2s ease;
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            border: 1px solid #A6A6A6;
+            border-radius: 9px;
+            top: 0;
+            bottom: 0;
+            background-color: #fff;
+        }
+    }
+    &FilterBtnActive {
+        transition: all 0.2s ease;
+        
+        &::before {
+            transition: all 0.2s ease;
+            bottom: -115px;
+        }
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    .Author {
+        &FilterBtn {
+            &::before {
+                background-color: transparent;
+                border: none;
+            }
+        }
+        &FilterBtnActive {
+            &::before {
+                background-color: #fff;
+                border: 1px solid #A6A6A6;
+            }
+        }
+        &FilterStartCategory {
+            padding: 15px 40px 10px 10px;
+            font-size: 16px;
+            &::after {
+                transform: translateY(-35%);
+            }
+        }
+        &FilterTitle {
+            padding: 15px 10px 10px 10px;
+        }
+        &FilterBtn {
+            min-width: 200px;
+        }
+    }
+}

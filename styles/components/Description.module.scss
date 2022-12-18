@@ -1,0 +1,56 @@
+.Description {
+    &BlockContainer {
+        padding: 40px 80px 40px 80px;
+        position: relative;
+        max-width: 1280px;
+        width: 100%;
+    }
+    &Text {
+        position: relative;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 28px;
+        align-items: center;
+        letter-spacing: 0.035em;
+        color: #293462;
+
+        p {
+            margin-top: 20px;
+        }
+    }
+    &AboutTitle {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .Description {
+        &BlockContainer {
+            padding: 0px 30px 0px 30px;
+        }
+        &AboutTitle {
+            display: block;
+            font-family: 'PT Serif';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 25px;
+            letter-spacing: 0.03em;
+
+            color: #293462;
+        }
+        &Text {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.03em;
+
+            color: #293462;
+        }
+    }
+
+}

@@ -1,0 +1,97 @@
+
+.AudioType {
+    &::after {
+        content: "";
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-image: url('/home/typeBook/ListenDesc.svg');
+        width: 28px;
+        height: 28px;
+    }
+}
+.TextType {
+    &::after {
+        content: "";
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-image: url('/home/typeBook/ReadDesc.svg');
+        width: 28px;
+        height: 28px;
+    }
+}
+.TextAudioType {
+    &::before {
+        content: "";
+        top: 0;
+        right: 34px;
+        position: absolute;
+        background-image: url('/home/typeBook/ListenDesc.svg');
+        width: 28px;
+        height: 28px;
+        z-index: 1;
+    }
+    &::after {
+        content: "";
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-image: url('/home/typeBook/ReadDesc.svg');
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.BookInCategory {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    max-width: 200px;
+    margin-bottom: 15px;
+    &Item {
+        position: relative;
+        padding-top: 10px;
+        
+    }
+    &Name {
+        color: #293462;
+    }
+    &Author {
+        color: rgba(41, 52, 98, 0.5);
+    }
+}
+
+@media (max-width: 600px) {
+    .AudioType {
+        &::after {
+            background-image: url('/home/typeBook/listen.svg');
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .TextType {
+        &::after {
+            background-image: url('/home/typeBook/read.svg');
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .TextAudioType {
+        &::before {
+            right: 23px;
+            top: 4px;
+            background-image: url('/home/typeBook/listen.svg');
+            width: 20px;
+            height: 20px;
+        }
+        &::after {
+            top: 4px;
+            background-image: url('/home/typeBook/read.svg');
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+}

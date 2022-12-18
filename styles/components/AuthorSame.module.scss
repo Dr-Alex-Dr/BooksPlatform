@@ -1,0 +1,78 @@
+.Author {
+    &Same {
+        max-width: 300px;
+        min-width: 280px;
+        margin-left: 65px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &SameTitle {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: 0.03em;
+
+        color: #293462;
+
+        margin-bottom: 25px;
+    }
+    &SamePrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+    }
+    &SameContainer {
+        width: 130px;
+        height: 165px;
+        margin-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;       
+    }
+    &SameName {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;      
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #069CBD;
+    }
+}
+
+@media (max-width: 1200px) {
+    .Author {
+        &Same {
+            margin-left: 5px;
+            min-width: 260px;
+        }
+        &SameTitle {
+            font-size: 28px;
+        }
+        
+
+    }
+}
+@media (max-width: 1100px) {
+    .Author {
+        &Same {
+            margin-left: 5px;
+            min-width: 235px;
+        }
+        &SamePrapper {
+            justify-content: center;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .Author {
+        &Same {
+            display: none;
+        }
+    }
+}

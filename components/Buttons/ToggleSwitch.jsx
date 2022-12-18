@@ -1,7 +1,6 @@
-import styles from "../../styles/buttons/toggleSwitch.module.scss";
+import styles from "../../styles/components/Buttons/toggleSwitch.module.scss";
 
 function ToggleSwitch({toggleSwitch, setToggleSwitch}) {
-    console.log(toggleSwitch);
     return (
         <button onClick={() => {setToggleSwitch(!toggleSwitch)}} >
             <div className={[styles.Wrapper, toggleSwitch ? styles.ToggleBtnContainerActive : ''].join(' ')}>
@@ -11,4 +10,4 @@ function ToggleSwitch({toggleSwitch, setToggleSwitch}) {
     )
 }
 
-export default ToggleSwitch;
+export {ToggleSwitch};

@@ -1,0 +1,43 @@
+.BlockContainer {
+    position: relative;
+    padding: 118px 80px 45px 80px;
+    max-width: 1280px;
+    width: 100%;
+}
+
+.ColorBack {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 575px;
+}
+.MColorBack {
+    height: 1780px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.PageBackBtn {
+    padding-top: 12px;
+    position: absolute;
+    left: 20px;
+}
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 1024px) {
+    .BlockContainer {
+        position: relative;
+        padding: 55px 30px 45px 30px;
+        max-width: 1280px;
+        width: 100%;
+    }
+    .ColorBack {
+        display: none;
+    }
+    .MColorBack {
+        display: block;
+    }
+}
